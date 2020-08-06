@@ -107,7 +107,7 @@ class RNA:
         i = 0
         while i <= len(self.strand):
             tlc = self.strand[i:i + 3]
-            # pulls only a codon at a time
+            # pulls only a codon, 3 letter sequence, at a time
             stop = ['UAG', 'UGA', 'UAA']
             if tlc not in stop:
                 protein += CODON_DICT.get(tlc, '')
